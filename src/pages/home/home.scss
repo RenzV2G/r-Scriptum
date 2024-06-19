@@ -1,0 +1,89 @@
+.home {
+    grid-template-columns: 4.32fr 7.68fr;
+    align-items: center;
+    padding: 100px;
+    height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        padding: 50px; /* Reduce padding */
+        justify-content: center; /* Center align content vertically */
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 20px; /* Further reduce padding for smaller screens */
+    }
+}
+
+.home__img {
+    height: 85%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 25px hsla(0, 0%, 0%, 0.3);
+    z-index: 1;
+    margin: 0 auto; /* Center image horizontally */
+
+    @media screen and (max-width: 768px) {
+        height: 50%; /* Adjust image height for smaller screens */
+        margin-bottom: 20px; /* Add margin below image for spacing */
+    }
+}
+
+.home__data {
+    max-width: 600px;
+    margin-inline: auto;
+    padding-top: 20px;
+
+    .title__animation {
+        position: relative;
+        font-size: var(--h1-font-size);
+        line-height: 1.24;
+        padding-left: 70px;
+        color: #E46620;
+
+        @media screen and (max-width: 768px) {
+            padding-left: 0; /* Remove left padding on smaller screens */
+        }
+    }
+
+    .home__title {
+        position: relative;
+        font-size: var(--h1-font-size);
+        line-height: 1.24;
+        padding-left: 70px;
+        color: var(--first-color);
+
+        @media screen and (max-width: 768px) {
+            padding-left: 0; /* Remove left padding on smaller screens */
+        }
+    }
+
+    .home__description {
+        line-height: 2.125;
+        margin-block: 20px 0;
+
+        @media screen and (max-width: 768px) {
+            margin-block: 10px 0; /* Further adjust margin for smaller screens */
+        }
+    }
+}
+
+.color__block {
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    background-color: var(--first-color);
+    top: -50%;
+    left: -83%;
+    transform: rotate(-15deg);
+
+    @media screen and (max-width: 768px) {
+        display: none; /* Hide the color block on smaller screens */
+    }
+}

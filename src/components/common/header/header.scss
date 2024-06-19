@@ -1,0 +1,80 @@
+.header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 5rem;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.123);
+    padding: 60px 0 60px 0;
+
+    @media (max-width: 768px) {
+        height: 3.5rem; /* Adjust height for smaller screens */
+        margin: 5px; /* Adjust margin for smaller screens */
+    }
+
+    &__content {
+        max-width: 1120px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 1rem; /* Reduce padding for smaller screens */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding: 0.5rem; /* Adjust padding for smaller screens */
+        }
+    }
+}
+
+.logo img{
+    height: auto;
+    width: 300px;
+    align-items: center;
+
+    @media (max-width: 768px){
+        width: 200px;
+    }
+    
+}
+
+.menu-toggle {
+    width: 3rem; /* Adjust width for smaller screens */
+    height: 3rem; /* Adjust height for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem; /* Adjust font-size for smaller screens */
+    position: relative;
+    cursor: pointer;
+    color: var(--first-color);
+
+    .bx-menu,
+    .bx-x {
+        position: absolute;
+        transition: 0.3s ease-in-out;
+    }
+
+    .bx-x {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.active .bx-x {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.active .bx-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    @media (max-width: 768px) {
+        width: 2.5rem; /* Adjust width for smaller screens */
+        height: 2.5rem; /* Adjust height for smaller screens */
+        font-size: 2rem; /* Adjust font-size for smaller screens */
+    }
+}

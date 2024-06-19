@@ -1,0 +1,95 @@
+import React from 'react';
+
+import Info from '../../components/Info';
+import Skills from '../../components/Skills'
+import Resume from "../../assets/Resume.pdf"
+
+import { FaDownload } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import "./about.scss";
+
+const About = () => {
+  return (
+
+    <main className="section container__main">
+      
+    <section className="about">
+      <h2 className="section__title">
+        About <span>Me</span>
+      </h2>
+
+      <div className="about__container grid">
+      
+
+
+        <div className="about__info">
+          <h3 className="section__subtitle">Personal Infos</h3>
+
+          <ul className="info__list grid">
+            <Info />
+          </ul>
+
+          <a href={Resume} download='' className="button">Download Resume<span className="button__icon"><FaDownload></FaDownload></span></a>
+        </div>
+
+
+        
+
+
+        <div className="stats grid">
+          
+          <Swiper
+            direction={'vertical'}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide><img src="src\assets\Certificates\certi2.png" alt="Certificate 3" /></SwiperSlide>
+            <SwiperSlide><img src="src\assets\Certificates\CG.png" alt="Certificate 3" /></SwiperSlide>
+            <SwiperSlide><img src="src\assets\Certificates\certificate.jpg" alt="Certificate 3" /></SwiperSlide>
+            <SwiperSlide><img src="src\assets\Certificates\RHC.png" alt="Certificate 3" /></SwiperSlide>
+            <SwiperSlide><img src="src\assets\Certificates\Loop.jpg" alt="Certificate 3" /></SwiperSlide>
+            <SwiperSlide><img src="src\assets\Certificates\skillshop.png" alt="Certificate 3" /></SwiperSlide>
+            <SwiperSlide><img src="src\assets\Certificates\Iot.png" alt="Certificate 3" /></SwiperSlide>
+            <SwiperSlide><img src="src\assets\Certificates\CSEC.png" alt="Certificate 3" /></SwiperSlide>
+
+          </Swiper>
+
+        </div>
+
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <div className="separator"></div>
+
+
+
+    <section className='skills'>
+      <h3 className="section__subtitle subtitle__center">My Skills</h3>
+
+      <div className="skills__container grid">
+        <Skills />
+      </div>
+
+      <div className="separator"></div>
+
+    </section>
+
+
+  </main>
+  );
+};
+
+export default About;

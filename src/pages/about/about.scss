@@ -1,0 +1,158 @@
+.container__main {
+  min-height: fit-content;
+  width: 100%;
+}
+
+.about__container,
+.info__list,
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.about__info {
+  flex-direction: column;
+  text-align: center; /* Center text horizontally */
+}
+
+.info__list {
+  row-gap: 30px;
+  margin: 0 auto 35px; /* Center info__list and add bottom margin */
+  width: 80%; /* Adjust width for better alignment */
+  max-width: 600px; /* Set maximum width to control layout */
+}
+
+.stats {
+  display: inline-block;
+}
+
+.section__subtitle {
+  font-size: var(--h2-font-size);
+  font-weight: var(--weight-600);
+  margin-bottom: 20px;
+}
+
+.info__list .info__title,
+.info__list .info__description {
+  font-size: var(--medium-font-size);
+}
+
+.info__list .info__description {
+  color: var(--title-color);
+  font-weight: var(--weight-600);
+}
+
+.swiper {
+  width: auto;
+  height: 500px;
+  margin: 0 auto; /* Center swiper horizontally */
+}
+
+.swiper-slide {
+  text-align: center;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+  object-fit: contain;
+}
+
+.separator {
+  border-top: 1px solid var(--border-color);
+  max-width: 40%;
+  margin: 72px auto 56px;
+}
+
+.subtitle__center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about__container,
+  .info__list,
+  .stats {
+    grid-template-columns: 1fr; /* Switch to single column layout for mobile */
+    justify-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within elements */
+  }
+
+  .info__list {
+    margin-bottom: 20px; /* Adjust margin for better spacing */
+    width: 90%; /* Adjust width for better alignment */
+  }
+
+  .swiper {
+    height: 300px; /* Reduce height of swiper for mobile */
+    top: 10px; /* Adjust top position if needed */
+  }
+
+  .separator {
+    max-width: 80%; /* Increase width of separator for better visibility */
+    margin: 40px auto; /* Center the separator */
+  }
+}
+
+
+//Skills container
+
+.skills__container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+  gap: 24px;
+}
+
+.skill__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  width: 180px; /* Adjust width as per your design */
+  height: 120px; /* Adjust height as per your design */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill__box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo__container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill__logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.skills__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--weight-400);
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+
